@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SheCodes Plus Hmwk 5</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/0a042cae6b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <form class="search">
+          <input
+            class="form-control enter-city" id="city-input"
+            type="text"
+            placeholder="Enter city"
+          />
+
+          <div class="search-button">
+            <i class="fas fa-search" id="spy-glass"></i>
+          </div>
+      </form> 
+      
+            
+            <h3 class="farenheit" id="f-units" >°F </h3>
+            <h3 class="celsius c-unit-unpicked" id="c-units" >°C</h3>
+        
+
+         <div class="current-loc-button">
+<button type="button" class="btn btn-secondary">Current Location</button>
+         </div>
+          <div class="selection">
+            <div class="row">
+              <div class="col">
+                <h1 class="city" id= "current-city"></h1>
+                <h3 class="date" id="todays-date"></h3>
+                <h3 class="temp" id="current-temp"> </h3>
+                <h3 class="weather" id="weather-description"></h3>
+                <h3 class="hi-lo" id= "hi-lo-temps"></h3>
+              </div>
+              <div class="col">
+                
+                  <img class="current-icon" src="images/sunny.png" alt="">
+                
+              </div>
+            </div>
+          </div>
+
+  <div class="future">
+          <div class="row">
+    <div class="col">
+      <div class="card bg-secondary" style="width:12rem">
+        <div class="card-body day-plus1">
+          <h5 class="dayplus1">Sun</h5>
+          <h5 class="dayplus1-temp">41°F / 33°F</h5>
+          <h5 class="dayplus1-weather">Partial Sun</h5>
+        </div>
+        <img id="dayplus1-icon" src="images/sunandcloud.png"  alt="">
+      </div>
+    </div>
+    <div class="col">
+      <div class="card bg-secondary" style="width:12rem">
+        <div class="card-body day-plus2">
+          <h5 class="dayplus2">Mon</h5>
+          <h5 class="dayplus2-temp">35°F / 28°F</h5>
+          <h5 class="dayplus2-weather">Snow</h5>
+        </div>
+        <img src="images/snow.png" id="dayplus2-icon" alt="">
+      </div> 
+    </div>  
+    <div class="col">
+      <div class="card bg-secondary" style="width:12rem">
+        <div class="card-body day-plus3">
+          <h5 class="dayplus3">Tue</h5>
+          <h5 class="dayplus3-temp">33°F / 31°F</h5>
+          <h5 class="dayplus3-weather">Hail</h5>
+        </div>
+        <img src="images/sunandrain2.png" id="dayplus3-icon" alt="">
+      </div> 
+    </div>  
+    <div class="col">
+      <div class="card bg-secondary" style="width:12rem">
+        <div class="card-body day-plus4">
+          <h5 class="dayplus4">Wed</h5>
+          <h5 class="dayplus4-temp">38°F / 31°F</h5>
+          <h5 class="dayplus4-weather">Partial Sun</h5>
+        </div>
+        <img src="images/sunandcloud.png" id="dayplus4-icon" alt="">
+
+      </div> 
+    </div>  
+    <div class="col">
+      <div class="card bg-secondary" style="width:12rem">
+        <div class="card-body day-plus5">
+          <h5 class="dayplus5">Thur</h5>
+          <h5 class="dayplus5-temp">44°F / 37°F</h5>
+          <h5 class="dayplus5-weather">Sunny</h5>
+        </div>
+        <img src="images/sunny.png" id="dayplus5-icon" alt="">
+      </div> 
+    </div>
+  </div>
+  <footer>Code written by Tricia Brigham</footer>
+</div>
+<script src="src/index.js"></script>
+  </body>
+</html>

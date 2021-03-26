@@ -1,0 +1,121 @@
+body {
+  background-color: #3f3f3f;
+  color: #fff;
+  font-family: "Quicksand", sans-serif;
+  padding: 5%;
+}
+
+img {
+  width: 85px;
+  display: block;
+  margin: 0 auto;
+}
+
+footer {
+  padding-top: 30px;
+  text-align: center;
+}
+
+.city {
+  font-size: 50px;
+}
+
+.container {
+  padding: 30px;
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+  border-radius: 10px;
+}
+
+.farenheit {
+  display: inline;
+  margin-left: 20%;
+  transition: all 200ms ease-in;
+}
+
+.celsius {
+  display: inline;
+  margin-left: 1%;
+  transition: all 200ms ease-in;
+}
+
+.f-unit-picked {
+  color: white;
+}
+
+.c-unit-picked {
+  color: white;
+}
+
+.f-unit-unpicked {
+  color: darkslategrey;
+}
+
+.c-unit-unpicked {
+  color: darkslategrey;
+}
+
+.farenheit:hover,
+.celsius:hover {
+  cursor: pointer;
+  color: white;
+}
+.search-button:hover {
+  cursor: pointer;
+  color: #102746;
+}
+
+.enter-city {
+  margin-top: 25px;
+  margin-left: 7%;
+  display: inline;
+  width: 35%;
+}
+
+.search {
+  display: inline;
+}
+
+.selection {
+  padding: 10px;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.current-icon {
+  display: inline;
+  width: 150px;
+}
+.card {
+  padding: 10px;
+  text-align: center;
+  background-image: linear-gradient(to right, #09203f 0%, #537895 100%);
+  border-radius: 10px;
+}
+
+.icon-dayplus5,
+.icon-dayplus4,
+.icon-dayplus3,
+.icon-dayplus2,
+.icon-dayplus1 {
+  font-size: 60px;
+}
+
+.future {
+  padding-top: 57px;
+}
+
+.search-button {
+  display: inline;
+  color: white;
+  font-size: 26px;
+}
+
+.search-button:hover {
+  color: #102746;
+}
+
+.current-loc-button {
+  display: inline;
+  margin-left: 10%;
+  transition: all 200ms ease-in;
+}
