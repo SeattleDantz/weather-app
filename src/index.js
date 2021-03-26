@@ -129,7 +129,8 @@ function getEnteredCityWeather(event) {
   let apiKeyMapQuest = "HZ0u4XCijeiKnhXQ2FtnMaL8Au0hYJxm";
   //let units = "imperial";
   let enteredCity = `${city.value}`;
-  let apiEndpointMapQuest = "http://open.mapquestapi.com/geocoding/v1/address?";
+  let apiEndpointMapQuest =
+    "https://open.mapquestapi.com/geocoding/v1/address?";
   let apiEndpointWeather = "https://api.openweathermap.org/data/2.5/weather?";
   let apiEndpointDaily = "https://api.openweathermap.org/data/2.5/onecall?";
 
