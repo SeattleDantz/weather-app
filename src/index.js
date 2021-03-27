@@ -109,7 +109,6 @@ function getLatLong(response) {
   let lat = response.data.results[0].locations[0].displayLatLng.lat;
   let long = response.data.results[0].locations[0].displayLatLng.lng;
   let apiKeyOpenWeather = "551f8c89cdce818fb4f3b6e3fe374a5c";
-  //let units = "imperial";
 
   let apiEndpointDaily = "https://api.openweathermap.org/data/2.5/onecall?";
 
@@ -127,7 +126,6 @@ function getEnteredCityWeather(event) {
   let city = document.querySelector("#city-input");
   let apiKeyOpenWeather = "551f8c89cdce818fb4f3b6e3fe374a5c";
   let apiKeyMapQuest = "HZ0u4XCijeiKnhXQ2FtnMaL8Au0hYJxm";
-  //let units = "imperial";
   let enteredCity = `${city.value}`;
   let apiEndpointMapQuest =
     "https://open.mapquestapi.com/geocoding/v1/address?";
