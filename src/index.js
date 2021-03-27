@@ -91,17 +91,23 @@ function displayTodayWeather(response) {
   let hiTemp = Math.round(response.data.main.temp_max);
   let loTemp = Math.round(response.data.main.temp_min);
   let weatherDescription = response.data.weather[0].main;
+  let windSpeed = response.data.wind.speed;
+  let humidity = response.data.main.humidity;
   let h1SelectedCity = document.querySelector("#current-city");
   let h3CurrentTemp = document.querySelector("#current-temp");
   let h3HiLoTemp = document.querySelector("#hi-lo-temps");
   let h3Description = document.querySelector("#weather-description");
   let imgWeather = document.querySelector(".current-icon");
   let weatherImage = determineWeatherImage(weatherDescription);
+  let h4WindSpeed = document.querySelector("#wind-speed");
+  let h4TodaysHumidity = document.querySelector("#todays-humidity");
 
   h1SelectedCity.innerHTML = `${city}`;
   h3CurrentTemp.innerHTML = `Currently ${temp}°${unitSymbol}`;
   h3HiLoTemp.innerHTML = `${hiTemp}°${unitSymbol}/${loTemp}°${unitSymbol}`;
   h3Description.innerHTML = `${weatherDescription}`;
+  h4WindSpeed.innerHTML = `Wind speed: ${windSpeed} ${windUnit}`;
+  h4TodaysHumidity.innerHTML = `Humidity: ${humidity} %`;
   imgWeather.src = `${weatherImage}`;
 }
 
@@ -174,6 +180,7 @@ function getCurrentLocation(event) {
 function setTempToF() {
   units = "imperial";
   unitSymbol = "F";
+  windUnit = "mi/hr";
   let farenheit = document.querySelector("#f-units");
   let celsius = document.querySelector("#c-units");
   farenheit.className = "farenheit f-unit-picked";
@@ -183,6 +190,7 @@ function setTempToF() {
 function setTempToC() {
   units = "metric";
   unitSymbol = "C";
+  windUnit = "m/sec";
   let farenheit = document.querySelector("#f-units");
   let celsius = document.querySelector("#c-units");
   farenheit.className = "farenheit f-unit-unpicked";
@@ -191,6 +199,7 @@ function setTempToC() {
 
 let units = "imperial";
 let unitSymbol = "F";
+let windUnit = "mi/hr";
 
 displayDateAndTime();
 // default's to New York's weather when landing on page for 1st time

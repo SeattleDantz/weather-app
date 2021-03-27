@@ -79,6 +79,7 @@ a {
 }
 
 .selection {
+  margin-left: 125px;
   padding: 10px;
   padding-top: 50px;
   text-align: center;
@@ -86,8 +87,15 @@ a {
 
 .current-icon {
   display: inline;
-  width: 150px;
+  width: 175px;
 }
+
+.humidity-wind {
+  flex: 0 10 auto;
+  padding: 70px;
+  text-align: left;
+}
+
 .card {
   padding: 10px;
   text-align: center;
