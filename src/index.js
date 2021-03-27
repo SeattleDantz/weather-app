@@ -206,6 +206,7 @@ displayDateAndTime();
 let city = document.querySelector("#city-input");
 city.value = "New York";
 getEnteredCityWeather();
+alert("Select ℉ or ℃ before you get started 🙃");
 
 let enterCity = document.querySelector(".search");
 enterCity.addEventListener("submit", getEnteredCityWeather);
