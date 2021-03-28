@@ -99,15 +99,16 @@ function displayTodayWeather(response) {
   let h3Description = document.querySelector("#weather-description");
   let imgWeather = document.querySelector(".current-icon");
   let weatherImage = determineWeatherImage(weatherDescription);
-  let h4WindSpeed = document.querySelector("#wind-speed");
-  let h4TodaysHumidity = document.querySelector("#todays-humidity");
+  let h3WindSpeed = document.querySelector("#wind-speed");
+  let h3TodaysHumidity = document.querySelector("#todays-humidity");
 
+  currentCity = `${city}`;
   h1SelectedCity.innerHTML = `${city}`;
   h3CurrentTemp.innerHTML = `Currently ${temp}°${unitSymbol}`;
   h3HiLoTemp.innerHTML = `${hiTemp}°${unitSymbol}/${loTemp}°${unitSymbol}`;
   h3Description.innerHTML = `${weatherDescription}`;
-  h4WindSpeed.innerHTML = `Wind speed: ${windSpeed} ${windUnit}`;
-  h4TodaysHumidity.innerHTML = `Humidity: ${humidity} %`;
+  h3WindSpeed.innerHTML = `Wind speed: ${windSpeed} ${windUnit}`;
+  h3TodaysHumidity.innerHTML = `Humidity: ${humidity} %`;
   imgWeather.src = `${weatherImage}`;
 }
 
@@ -137,7 +138,8 @@ function getEnteredCityWeather(event) {
     "https://open.mapquestapi.com/geocoding/v1/address?";
   let apiEndpointWeather = "https://api.openweathermap.org/data/2.5/weather?";
   let apiEndpointDaily = "https://api.openweathermap.org/data/2.5/onecall?";
-
+  currentCity = `${city.value}`;
+  console.log(`${currentCity}`);
   if (city.value !== "") {
     city.value = "";
     axios
@@ -181,20 +183,26 @@ function setTempToF() {
   units = "imperial";
   unitSymbol = "F";
   windUnit = "mi/hr";
+  let city = document.querySelector("#city-input");
   let farenheit = document.querySelector("#f-units");
   let celsius = document.querySelector("#c-units");
   farenheit.className = "farenheit f-unit-picked";
   celsius.className = "celsius c-unit-unpicked";
+  city.value = `${currentCity}`;
+  getEnteredCityWeather();
 }
 
 function setTempToC() {
   units = "metric";
   unitSymbol = "C";
   windUnit = "m/sec";
+  let city = document.querySelector("#city-input");
   let farenheit = document.querySelector("#f-units");
   let celsius = document.querySelector("#c-units");
   farenheit.className = "farenheit f-unit-unpicked";
   celsius.className = "celsius c-unit-picked";
+  city.value = `${currentCity}`;
+  getEnteredCityWeather();
 }
 
 let units = "imperial";
@@ -205,8 +213,8 @@ displayDateAndTime();
 // default's to New York's weather when landing on page for 1st time
 let city = document.querySelector("#city-input");
 city.value = "New York";
+let currentCity = city.value;
 getEnteredCityWeather();
-alert("Select ℉ or ℃ before you get started 🙃");
 
 let enterCity = document.querySelector(".search");
 enterCity.addEventListener("submit", getEnteredCityWeather);
