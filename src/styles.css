@@ -20,7 +20,10 @@ a {
 }
 
 .city {
-  font-size: 50px;
+  font-size: 80px;
+  font-weight: 900;
+  font-variant-caps: small-caps;
+  line-height: 100px;
 }
 
 .container {
@@ -79,7 +82,7 @@ a {
 }
 
 .selection {
-  margin-left: 125px;
+  margin-left: 100px;
   padding: 10px;
   padding-top: 50px;
   text-align: center;
@@ -88,12 +91,19 @@ a {
 .current-icon {
   display: inline;
   width: 175px;
+  margin-left: 80px;
+  margin-top: 40px;
 }
 
 .humidity-wind {
   flex: 0 10 auto;
-  padding: 70px;
+  padding-top: 108px;
   text-align: left;
+}
+
+.humidity,
+.wind {
+  font-size: 22px;
 }
 
 .card {
