@@ -91,8 +91,8 @@ function displayTodayWeather(response) {
   let hiTemp = Math.round(response.data.main.temp_max);
   let loTemp = Math.round(response.data.main.temp_min);
   let weatherDescription = response.data.weather[0].main;
-  let windSpeed = response.data.wind.speed;
-  let humidity = response.data.main.humidity;
+  let windSpeed = Math.round(response.data.wind.speed);
+  let humidity = Math.round(response.data.main.humidity);
   let h1SelectedCity = document.querySelector("#current-city");
   let h3CurrentTemp = document.querySelector("#current-temp");
   let h3HiLoTemp = document.querySelector("#hi-lo-temps");
