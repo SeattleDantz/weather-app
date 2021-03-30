@@ -139,7 +139,6 @@ function getEnteredCityWeather(event) {
   let apiEndpointWeather = "https://api.openweathermap.org/data/2.5/weather?";
   let apiEndpointDaily = "https://api.openweathermap.org/data/2.5/onecall?";
   currentCity = `${city.value}`;
-  console.log(`${currentCity}`);
   if (city.value !== "") {
     city.value = "";
     axios
